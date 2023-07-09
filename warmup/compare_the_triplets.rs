@@ -11,6 +11,7 @@ fn compareTriplets(a: &[i32], b: &[i32]) -> Vec<i32> {
     for i in 0..a.len() {
         // rust에는 increment(++), decrement(--) 연산자가 없다
         // 함수형 프로그래밍 형태를 많이 띄기 때문에 사용할 일이 적어서 그렇다고 한다
+        // 출처: https://www.reddit.com/r/rust/comments/jf66eu/why_are_there_no_increment_and_decrement/
         if a[i] > b[i]  {
             A = A + 1
         } else if a[i] == b[i] {

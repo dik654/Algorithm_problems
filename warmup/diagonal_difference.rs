@@ -3,10 +3,11 @@ use std::fs:File;
 use std::io::{self, BufRead, Write};
 
 fn diagonalDifference(arr: &[Vec<i32>]) -> i32 {
-    let mut sum;
+    let mut sum = 0;
     for i in 0..arr.len() {
-        = arr[i][i] - arr[arr.len()-1 - i][i]);
+       sum += arr[i][i] - arr[i][arr.len()-1 - i];
     }
+    sum.abs()
 }
 
 fn main() {

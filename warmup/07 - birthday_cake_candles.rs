@@ -3,7 +3,17 @@ use std::fs:File;
 use std::io::{self, BufRead, Write};
 
 fn birthdayCakeCandles(candles: &[i32]) -> i32 {
-
+    let mut max: i32 = 0;
+    let mut count: i32 = 0;
+    for i in 0..candles.len() {
+        if (max < candles[i]) {
+            count = 1;
+            max = candles[i]; 
+        } else if (max == candles[i]) {
+            count += 1;
+        };
+    };
+    count
 }
 
 fn main() {
